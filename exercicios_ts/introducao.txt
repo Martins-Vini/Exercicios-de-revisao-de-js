@@ -1,0 +1,1 @@
+Aqui é onde será treinado os mesmos exercícios, porém usando TypeScript para o treino de sua sintaxe

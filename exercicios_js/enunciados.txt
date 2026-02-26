@@ -6,7 +6,7 @@ ex2. Demonstre o conceito de Hoisting criando um exemplo onde uma variável é c
 
 ex3. Crie um pequeno script onde um objeto é declarado como const. Tente alterar uma propriedade interna desse objeto e, em seguida, tente reatribuir o objeto inteiro a uma nova variável. Observe e descreva o que é permitido.
 
-Exercícios de condições
+Exercícios de condições If/else
 
 ex1. Simples: Escreva um algoritmo que receba um número e verifique apenas se ele é um número positivo, exibindo uma mensagem de confirmação.
 
@@ -53,3 +53,7 @@ ex5. Desenvolva um script que calcule o volume de uma caixa retangular (comprime
 ex6. Escreva um código que calcule o IMC (Índice de Massa Corporal) de uma pessoa, dada a fórmula: peso / (altura * altura).
 
 ex7. Crie um algoritmo que calcule o valor final de um produto que custa R$ 250,00 após aplicar um desconto de 25% e, em seguida, uma taxa de conveniência de 5% sobre o valor já descontado.
+
+Exercício JSON
+
+Crie um JSON com 5 produtos que tem em sua casa, cada produto com ao menos 5 dimensões.
