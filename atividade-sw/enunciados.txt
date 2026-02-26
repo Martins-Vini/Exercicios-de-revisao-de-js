@@ -1,0 +1,55 @@
+Exercícios de variáveis e suas declarações
+
+ex1. Crie um código que declare uma constante para armazenar o valor de PI (3.14159). Em seguida, utilize uma variável de escopo de bloco para armazenar o raio de uma circunferência e calcule a área.
+
+ex2. Demonstre o conceito de Hoisting criando um exemplo onde uma variável é chamada antes de sua declaração usando var, e compare o comportamento (comentando o que aconteceria) caso fosse utilizada a palavra-chave let.
+
+ex3. Crie um pequeno script onde um objeto é declarado como const. Tente alterar uma propriedade interna desse objeto e, em seguida, tente reatribuir o objeto inteiro a uma nova variável. Observe e descreva o que é permitido.
+
+Exercícios de condições
+
+ex1. Simples: Escreva um algoritmo que receba um número e verifique apenas se ele é um número positivo, exibindo uma mensagem de confirmação.
+
+ex2.Básico: Crie um programa que receba a idade de um usuário e informe se ele já tem idade suficiente para votar (considere 16 anos como idade mínima).
+
+ex3. Composto: Desenvolva um sistema que receba a nota de um aluno (0 a 10) e o classifique em: "Insuficiente" (menor que 5), "Regular" (5 a 6.9), "Bom" (7 a 8.9) ou "Excelente" (9 a 10).
+
+ex4. Ternário: Crie uma variável chamada status que receba o resultado de uma operação ternária. A operação deve verificar se a velocidade de um carro é maior que 80; se for, status recebe "Multado", caso contrário, "Dentro do limite".
+
+Exercícios de switchCase
+
+ex1. Construa uma calculadora simples que receba dois números e uma string representando um operador aritmético (+, -, *, /). Utilize o switch case para realizar a operação correspondente e exibir o resultado.
+
+Exercícios de Laços de repetição
+
+ex1. while: Escreva um laço que simule uma contagem regressiva de 10 até 0, exibindo cada número no console.
+
+ex2. do-while: Crie um algoritmo que peça para o usuário digitar um número e continue pedindo (repetindo a entrada) até que o número digitado seja o número "7".
+
+ex3. for: Desenvolva um código que imprima a tabuada do número 5 (de 1 a 10) utilizando a estrutura de repetição clássica.
+
+ex4. map: Dado um vetor de números [10, 20, 30, 40, 50], utilize o método map para criar um novo vetor onde cada valor seja multiplicado por 1.15 (representando um aumento de 15%).
+
+ex5. forEach: Dado um vetor de nomes de cidades, utilize o forEach para imprimir no console cada cidade precedida pelo seu índice no array (ex: "0: São Paulo").
+
+Exercícios de vetores
+
+ex1. Somatória: Crie um vetor com 6 números inteiros e escreva um algoritmo que percorra esse vetor e calcule a soma total de todos os seus elementos.
+
+ex2. Busca: Crie um vetor contendo nomes de frutas. Escreva um código que procure por uma fruta específica informada pelo usuário e retorne em qual índice ela se encontra ou uma mensagem informando que não foi encontrada.
+
+Exercícios de operadores aritiméticos
+
+ex1. Escreva um algoritmo que calcule o resto da divisão de um número inteiro por 2 para determinar se ele é par ou ímpar.
+
+ex2. Calcule a média aritmética simples de quatro notas bimestrais fornecidas.
+
+ex3. Crie um programa que converta uma temperatura dada em graus Celsius para Fahrenheit utilizando a fórmula: F = (C * 9/5) + 32.
+
+ex4. Demonstre o uso dos operadores de incremento (++) e decremento (--) em uma variável, exibindo o valor antes e depois de cada operação.
+
+ex5. Desenvolva um script que calcule o volume de uma caixa retangular (comprimento * largura * altura).
+
+ex6. Escreva um código que calcule o IMC (Índice de Massa Corporal) de uma pessoa, dada a fórmula: peso / (altura * altura).
+
+ex7. Crie um algoritmo que calcule o valor final de um produto que custa R$ 250,00 após aplicar um desconto de 25% e, em seguida, uma taxa de conveniência de 5% sobre o valor já descontado.
