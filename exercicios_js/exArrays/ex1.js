@@ -1,5 +1,5 @@
 function sumArrayNumbers(){
-    let numbers = [1, 2, 3, 4, 5]
+    let numbers = [1, 2, 3, 4, 5, 6]
     let sum = 0;
     numbers.forEach((number) => {
         if(number > 1){
