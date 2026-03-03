@@ -54,6 +54,37 @@ ex6. Escreva um código que calcule o IMC (Índice de Massa Corporal) de uma pes
 
 ex7. Crie um algoritmo que calcule o valor final de um produto que custa R$ 250,00 após aplicar um desconto de 25% e, em seguida, uma taxa de conveniência de 5% sobre o valor já descontado.
 
+Exercícios de operadores relacionais
+
+ex1. Igualdade Ampla vs. Estrita:
+Crie uma variável numero = 10 e uma variável texto = "10". Use console.log para exibir o resultado de numero == texto e numero === texto. Adicione um comentário no código explicando por que os resultados foram diferentes.
+
+ex2. Validação de Maioridade:
+Crie uma variável idade. Escreva uma estrutura que use o operador >= para verificar se a idade é maior ou igual a 18 e imprima "Pode dirigir". Use o operador < para verificar se é menor que 18 e imprima "Use o ônibus".
+
+ex3. Comparação de Strings (Ordem Alfabética):
+Crie duas variáveis, fruta1 = "Maçã" e fruta2 = "Banana". Use o operador > para verificar qual string é "maior" (vem depois no dicionário) e exiba o resultado. Teste o que acontece se você mudar "Banana" para "banana" (minúsculo).
+
+ex4. Sistema de Estoque:
+Crie uma variável quantidadeEstoque = 50 e estoqueMinimo = 50. Use o operador <= para verificar se o estoque atingiu o limite mínimo e dispare um alerta no console. Use também o operador !== para verificar se a quantidade atual é diferente de zero.
+
+ex5. Diferença Estrita:
+Crie uma variável valor = 0. Compare se valor !== false. Explique via comentário por que o JavaScript considera que 0 é diferente de false na comparação estrita, mesmo ambos sendo valores "falsy".
+
+ex6. Verificação de Notas:
+Crie uma variável mediaFinal = 7. Escreva três comparações: uma usando > para ver se passou com folga (nota > 7), uma usando === para ver se passou no limite (nota 7) e uma usando < para ver se reprovou.
+
+Exercícios de operadores lógicos
+
+ex1. Login de Usuário (Operador &&):
+Crie as variáveis usuarioDigitado = "admin", senhaDigitada = "123". Crie uma constante podeAcessar que receba o resultado da comparação: o usuário deve ser igual a "admin" E a senha deve ser igual a "123". Exiba o booleano final.
+
+ex2. Configuração de Cores (Operador ||):
+Crie uma variável chamada corPersonalizada (deixe-a como null ou undefined). Crie uma variável corPadrao = "preto". Use o operador || para definir uma constante corFinal que recebe a corPersonalizada ou, caso ela não exista, assume a corPadrao.
+
+ex3. Inversão de Estado (Operador !):
+Crie uma variável booleana estaChovendo = true. Use o operador de negação para criar uma variável levarGuardaChuva. Se não estiver chovendo, levarGuardaChuva deve ser falso. Tente fazer isso de forma que, ao mudar estaChovendo para false, o sistema se atualize automaticamente.
+
 Exercício JSON
 
 Crie um JSON com 5 produtos que tem em sua casa, cada produto com ao menos 5 dimensões.
