@@ -1,6 +1,0 @@
-{
-  "type": "module",
-  "dependencies": {
-    "inquirer": "^13.3.0"
-  }
-}

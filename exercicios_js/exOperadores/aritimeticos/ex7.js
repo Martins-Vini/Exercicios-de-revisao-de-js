@@ -3,7 +3,11 @@ function discount(price, discountPercentage) {
     let disc = discountPercentage/100*price;
     let newPrice = price - disc;
 
-    return newPrice+taxaConv;
+    let result = newPrice+taxaConv;
+
+    return result;
 }
 
-console.log(discount(250, 25))
+//console.log(discount(250, 25))
+
+export default discount;

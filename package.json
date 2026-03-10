@@ -1,0 +1,12 @@
+{
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon ./index.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "inquirer": "^13.3.0",
+    "nodemon": "^3.1.14",
+    "route": "^0.2.5"
+  }
+}

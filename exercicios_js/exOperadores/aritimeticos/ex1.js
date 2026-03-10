@@ -8,4 +8,7 @@ function verifyNumberPair(){
     }
 }
 
-console.log(verifyNumberPair());
+//console.log(verifyNumberPair());
+
+export default verifyNumberPair;
+

@@ -10,4 +10,6 @@ function sumArrayNumbers(){
     return sum;
 }
 
-console.log(sumArrayNumbers())
+//console.log(sumArrayNumbers())
+
+export default sumArrayNumbers;

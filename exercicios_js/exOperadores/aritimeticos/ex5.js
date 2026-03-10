@@ -3,7 +3,10 @@ function areaRet(){
     let height = 10
     let large = 4
 
-    return c*height*large
+    let result = c*height*large;
+    return result
 }
 
-console.log(areaRet())
+//console.log(areaRet())
+
+export default areaRet;
