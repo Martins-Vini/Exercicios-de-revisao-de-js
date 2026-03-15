@@ -1,11 +1,16 @@
 function showCont(){
     let i = 10;
+    let seq = []
 
     while(i > 0){
-        console.log(i);
+        seq.push(i)
         i--;
     };
 
+    return seq;
+
 }
 
-showCont()
+//showCont()
+
+export default showCont;

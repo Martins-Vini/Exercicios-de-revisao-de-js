@@ -1,7 +1,13 @@
-let idade = 16;
+function validateNumber() {
+    let idade = 16;
 
-if (idade > 0){
-    console.log("Positivo")
+    if (idade > 0) {
+        return "Positivo";
+    }
+
+    return "É o Fim :( ";
 }
 
-console.log("É o Fim :( ")
+//console.log(validateNumber());
+
+export default validateNumber;

@@ -2,10 +2,12 @@ function verifyEquality(a, b) {
     return [a === b, a == b];
 }
 
-let num1 = 10;
-let num2 = "10";
+//let num1 = 10;
+//let num2 = "10";
 
-console.log(verifyEquality(num1, num2));
+//console.log(verifyEquality(num1, num2));
+
+export default verifyEquality;
 
 //O primeiro resultado é false porque o operador === verifica a igualdade estrita, ou seja, ele compara tanto o valor quanto o tipo dos operandos. No caso, num1 é um número (10) e num2 é uma string ("10"), então eles não são estritamente iguais.
 

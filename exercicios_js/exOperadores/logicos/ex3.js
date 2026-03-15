@@ -9,4 +9,6 @@ function catchUmbrella(){
     }
 }
 
-console.log(catchUmbrella());
+//console.log(catchUmbrella());
+
+export default catchUmbrella;

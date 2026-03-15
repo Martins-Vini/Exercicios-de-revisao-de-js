@@ -6,9 +6,11 @@ function verifyTypeValue(value) {
     }
 }
 
-let value = 0;
+//let value = 0;
 
-console.log(verifyTypeValue(value));
+//console.log(verifyTypeValue(value));
+
+export default verifyTypeValue;
 
 //0 é diferente de false pois o operador de comparação estrita (===) compara tanto o valor quanto o tipo. O número 0 é considerado um valor falsy em JavaScript, mas não é igual a false, pois eles têm tipos diferentes (number e boolean, respectivamente).
 

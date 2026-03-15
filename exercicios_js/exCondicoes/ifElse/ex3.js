@@ -15,4 +15,6 @@ function validateGrade(grade){
     }
 }
 
-console.log(validateGrade(getGrade()))
+//console.log(validateGrade(getGrade()))
+
+export {getGrade, validateGrade}
