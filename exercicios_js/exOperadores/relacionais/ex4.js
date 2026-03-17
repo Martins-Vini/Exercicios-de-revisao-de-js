@@ -13,4 +13,6 @@ function validateStock(qntd, stockMin) {
 let qntd = 50;
 let stockMin = 50;
 
-console.log(validateStock(qntd, stockMin));
+//console.log(validateStock(qntd, stockMin));
+
+export default validateStock;

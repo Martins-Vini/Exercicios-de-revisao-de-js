@@ -1,4 +1,4 @@
-function validateGrade(grade) {
+function validateGrades(grade) {
     if (grade >= 0 && grade <= 10) {
         if(grade >= 7) {
             return "Aprovado";
@@ -9,4 +9,6 @@ function validateGrade(grade) {
 }
 
 let grade = 10
-console.log(validateGrade(grade)); 
+//console.log(validateGrade(grade)); 
+
+export default validateGrades

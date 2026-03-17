@@ -6,5 +6,7 @@ function validateAge(age) {
     }
 }
 
-console.log(validateAge(20));
-console.log(validateAge(15));
+//console.log(validateAge(20));
+//console.log(validateAge(15));
+
+export default validateAge

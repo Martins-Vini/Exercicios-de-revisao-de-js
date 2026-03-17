@@ -1,6 +1,6 @@
 let age = 21
 
-function validateAge(age){
+function validatecnh(age){
     if(age >= 18){
         return "Já pode tirar CNH: Idade suficiente"
     } else{
@@ -8,4 +8,6 @@ function validateAge(age){
     }
 }
 
-console.log(validateAge(age))
+//console.log(validatecnh(age))
+
+export default validatecnh

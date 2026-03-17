@@ -27,6 +27,14 @@ import showCity from './exercicios_js/exLoops/ex5.js'
 import sumArrayNumbers from './exercicios_js/exArrays/ex1.js'
 import buscarFruta from './exercicios_js/exArrays/ex2.js'
 import showProduto from './exercicios_js/exJson/ex1.js'
+import validateAge from './exercicios_js/exOperadores/relacionais/ex2.js';
+import validateStock from './exercicios_js/exOperadores/relacionais/ex4.js';
+import validateGrades from './exercicios_js/exOperadores/relacionais/ex6.js';
+import settingColor from './exercicios_js/exOperadores/logicos/ex2.js';
+import numberSeven from './exercicios_js/exLoops/ex2.js';
+import newVetor from './exercicios_js/exLoops/ex4.js';
+import validatecnh from './exercicios_js/exCondicoes/ifElse/ex2.js';
+import validateVelocity from './exercicios_js/exCondicoes/ifElse/ex4.js';
 
 app.get('/', (req , res)=>{
     res.send("I love my life!")
@@ -84,19 +92,35 @@ app.get('/compararnumeros', (req,res)=>{
     res.json({"Verificação": verifyEquality(12, "12")})
 });
 
+app.get('/validateage', (req,res)=>{
+    res.json({"Verificação": validateAge(20)})
+})
+
 app.get('/verordemalfa', (req,res)=>{
     res.json({"Ordem": verifyOrderAlfabetico("Maçã", "Banana")})
 });
 
+app.get('/validatestock', (req,res)=>{
+    res.json({"Quantidade": validateStock(50,50)})
+})
+
 app.get('/tipovalor', (req,res)=>{
     res.json({"Tipo": verifyTypeValue(0)})
 });
+
+app.get('/validategrade', (req,res)=>{
+    res.json({"Resultado": validateGrades(7)})
+})
 
 //Operadores Lógicos
 
 app.get('/acessarPerfil', (req,res)=>{
     res.json({"Status_do_Acesso": acessProfile("admin", "123")})
 });
+
+app.get('/settingcolor', (req,res)=>{
+    res.json({"Cor final": settingColor("black","white")})
+})
 
 app.get('/pegarGuardachuva', (req,res)=>{
     res.json({"Tem_Guarda-chuva": catchUmbrella()})
@@ -108,9 +132,17 @@ app.get('/positivoounegativo', (req,res)=>{
     res.json({"Mensagem": validateNumber()})
 });
 
+app.get('/cnh', (req,res)=>{
+    res.json({"Verificação": validatecnh(21)})
+})
+
 app.get('/verificarnota', (req,res)=>{
     res.json({"Estado":validateGrade(getGrade())})
 });
+
+app.get('/validatevelocity', (req,res)=>{
+    res.json({"Aviso": validateVelocity(75)})
+})
 
 app.get('/calculadora', (req,res)=>{
     res.json({"Resultado": calc(getNumbers())})
@@ -122,9 +154,17 @@ app.get('/contadorreverso', (req,res)=>{
     res.json({"contador": showCont()})
 });
 
+app.get('/numberseven', (req,res)=>{
+    res.json({"Retorno": numberSeven(5)})
+});
+
 app.get('/tabuada5', (req,res)=>{
     res.json({"tabuada": multTableFive()})
 });
+
+app.get('/newVetor', (req,res)=>{
+    res.json({"Vetor": newVetor()})
+})
 
 app.get('/vercidade', (req,res)=>{
     res.json({"Cidade": showCity()})

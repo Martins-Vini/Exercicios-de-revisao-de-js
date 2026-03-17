@@ -6,4 +6,6 @@ function settingColor(color, color2) {
 let colorCustomized = undefined
 let colorDefault = "Black"
 
-console.log(settingColor(colorDefault, colorCustomized))
+//console.log(settingColor(colorDefault, colorCustomized))
+
+export default settingColor;
