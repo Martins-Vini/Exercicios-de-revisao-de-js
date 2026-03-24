@@ -1,4 +1,4 @@
-function showProduto(){
+function showProduto(idx){
   let produtosLimpeza = [
     {
       "nome": "Detergente Neutro",
@@ -37,7 +37,7 @@ function showProduto(){
     }
   ]
 
-  return produtosLimpeza;
+  return produtosLimpeza[idx];
 
 }
 

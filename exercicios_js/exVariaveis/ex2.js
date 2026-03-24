@@ -4,7 +4,7 @@ nome = "Raven";
 
 var nome;
 
-function showName(){
+function showName(nome){
     return nome
 }
 

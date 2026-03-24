@@ -1,5 +1,4 @@
-function validateNumber() {
-    let idade = 16;
+function validateNumber(idade) {
 
     if (idade > 0) {
         return "Positivo";

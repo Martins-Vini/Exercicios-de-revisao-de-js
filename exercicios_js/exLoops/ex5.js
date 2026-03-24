@@ -1,10 +1,10 @@
-function showCity(){
+function showCity(num){
     let cities = ["São Paulo", "Suzano", "Mauá", "Santo André", "São Bernardo do Campo"];
-    let listFormat = []
-    cities.forEach(c => {
-        listFormat.push(`${cities.indexOf(c)}, ${c}`);
+    let idx = []
+    cities.forEach(num => {
+        idx.push(`${cities.findIndex(num)}`);
     })
-    return listFormat;
+    return idx;
 }
 
 //showCity();

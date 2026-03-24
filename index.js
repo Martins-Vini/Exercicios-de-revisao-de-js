@@ -11,6 +11,7 @@ import { router_loops } from './routers/loops_router.js';
 import { router_json } from './routers/json_router.js';
 
 app.use(express.Router())
+app.use(express.json())
 
 app.get('/', (req , res)=>{
     res.send("I love my life!")

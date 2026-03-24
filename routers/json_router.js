@@ -3,8 +3,10 @@ const router_json = express()
 
 import showProduto from '../exercicios_js/exJson/ex1.js'
 
-router_json.get('/mostrarpessoa', (req,res)=>{
-    res.json({"Pessoa": showProduto()})
+router_json.get('/mostrarproduto/:id', (req,res)=>{
+    let id = req.params.id
+    let idx = Number(id)
+    res.json({"Produto": showProduto(idx)})
 });
 
 

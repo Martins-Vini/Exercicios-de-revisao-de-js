@@ -9,24 +9,37 @@ import {calc, getNumbers} from '../exercicios_js/exCondicoes/switchCase/ex1.js';
 
 //Condicionais
 
-router_condicoes.get('/positivoounegativo', (req,res)=>{
-    res.json({"Mensagem": validateNumber()})
+router_condicoes.get('/positivoounegativo/:id', (req,res)=>{
+    let id = req.params.id
+    let idade = Number(id)
+    res.json({"Mensagem": validateNumber(idade)})
 });
 
-router_condicoes.get('/cnh', (req,res)=>{
-    res.json({"Verificação": validatecnh(21)})
+router_condicoes.get('/cnh/:id', (req,res)=>{
+    let id = req.params.id
+    let idade = Number(id)
+    res.json({"Verificação": validatecnh(idade)})
 })
 
-router_condicoes.get('/verificarnota', (req,res)=>{
-    res.json({"Estado":validateGrade(getGrade())})
+router_condicoes.get('/verificarnota/:id', (req,res)=>{
+    let id = req.params.id
+    let nota = Number(id)
+    res.json({"Estado":validateGrade(getGrade(nota))})
 });
 
-router_condicoes.get('/validatevelocity', (req,res)=>{
-    res.json({"Aviso": validateVelocity(75)})
+router_condicoes.get('/validatevelocity/:id', (req,res)=>{
+    let id = req.params.id
+    let velo = Number(id)
+    res.json({"Aviso": validateVelocity(velo)})
 })
 
-router_condicoes.get('/calculadora', (req,res)=>{
-    res.json({"Resultado": calc(getNumbers())})
+router_condicoes.get('/calculadora/:n1/:n2/:op', (req,res)=>{
+    let n1 = req.params.n1
+    let num1 = Number(n1)
+    let n2 = req.params.n2
+    let num2 = Number(n2)
+    let op = req.params.op
+    res.json({"Resultado": calc(num1,num2,op)})
 });
 
 

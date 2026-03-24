@@ -7,17 +7,21 @@ import showPeople from '../exercicios_js/exVariaveis/ex3.js'
 
 //Variáveis
 
-router_variaveis.get('/calccircuferencia', (req,res)=>{
-    const piValue = 3.141591;
-    res.json({"Circunferência":calculoCircunferencia(piValue)});
+router_variaveis.get('/calccircuferencia/:id', (req,res)=>{
+    let id = req.params.id
+    let raio = Number(id)
+    res.json({"Circunferência":calculoCircunferencia(raio)});
 });
 
-router_variaveis.get('/printarnome', (req,res)=>{
-    res.json({"Nome":showName()})
+router_variaveis.get('/printarnome/:id', (req,res)=>{
+    let id = req.params.id
+    res.json({"Nome":showName(id)})
 });
 
-router_variaveis.get('/mostrarpessoas', (req,res)=>{
-    res.json({"Pessoa":showPeople()})
+router_variaveis.get('/mostrarpessoas/:id', (req,res)=>{
+    let id = req.params.id
+    let idx = Number(id)
+    res.json({"Pessoa":showPeople(idx)})
 });
 
 export {router_variaveis}

@@ -1,5 +1,3 @@
-let age = 21
-
 function validatecnh(age){
     if(age >= 18){
         return "Já pode tirar CNH: Idade suficiente"

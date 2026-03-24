@@ -1,5 +1,4 @@
-function showCont(){
-    let i = 10;
+function showCont(i){
     let seq = []
 
     while(i > 0){

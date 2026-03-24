@@ -1,7 +1,7 @@
-function multTableFive(){
+function multTable(num){
     let tabuada = [];
     for(let i = 0; i <= 10; i++){
-        tabuada.push(`${5} x ${i} = ${5 * i}`);
+        tabuada.push(`${num} x ${i} = ${num * i}`);
     }
 
     return tabuada;
@@ -9,4 +9,4 @@ function multTableFive(){
 
 //multTableFive();
 
-export default multTableFive;
+export default multTable;
