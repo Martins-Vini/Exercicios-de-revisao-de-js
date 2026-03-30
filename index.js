@@ -1,7 +1,7 @@
 import express from 'express'; 
 //mport path from "path";
-const app = express()
-const door = 8080
+const app = express();
+const door = 8080;
 
 import { router_variaveis } from './routers/variaveis_router.js';
 import { router_arrays } from './routers/arrays_routers.js';
@@ -10,8 +10,8 @@ import { router_condicoes } from './routers/condicoes_router.js';
 import { router_loops } from './routers/loops_router.js';
 import { router_json } from './routers/json_router.js';
 
-app.use(express.Router())
-app.use(express.json())
+app.use(express.Router());
+app.use(express.json());
 
 app.get('/', (req , res)=>{
     res.send("I love my life!")

@@ -1,7 +1,6 @@
-function verifyNumberPair(){
-    let num = 17
+function verifyNumberPair(n){
 
-    if(num % 2 == 0){
+    if(n % 2 == 0){
         return "O número é par"
     } else{
         return "O número é ímpar"

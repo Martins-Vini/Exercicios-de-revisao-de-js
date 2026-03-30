@@ -1,7 +1,5 @@
-function catchUmbrella(){
-    let isRaining = true;
-
-    if(isRaining){
+function catchUmbrella(chuva){
+    if(chuva){
         let hasUmbrella = true;
         return hasUmbrella;
     } else{

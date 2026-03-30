@@ -3,7 +3,7 @@ const router_operadores = express();
 
 import verifyNumberPair from '../exercicios_js/exOperadores/aritimeticos/ex1.js'
 import notaFinal from '../exercicios_js/exOperadores/aritimeticos/ex2.js'
-import {getTemperature, castTemperature} from '../exercicios_js/exOperadores/aritimeticos/ex3.js'
+import castTemperature from '../exercicios_js/exOperadores/aritimeticos/ex3.js'
 import incrementoDecremento from '../exercicios_js/exOperadores/aritimeticos/ex4.js'
 import areaRet from '../exercicios_js/exOperadores/aritimeticos/ex5.js'
 import imc from '../exercicios_js/exOperadores/aritimeticos/ex6.js'
@@ -22,7 +22,9 @@ import validateGrades from '../exercicios_js/exOperadores/relacionais/ex6.js';
 
 
 router_operadores.get('/verificarnum', (req,res)=>{
-    res.json({"Resultado":verifyNumberPair()})
+    let {num} = req.query
+    let numValue = Number(num)
+    res.json({"Resultado":verifyNumberPair(numValue)})
 });
 
 router_operadores.get('/notafinal', (req,res)=>{
@@ -30,8 +32,9 @@ router_operadores.get('/notafinal', (req,res)=>{
 });
 
 router_operadores.get('/conversaotemperatura', (req,res)=>{
-    const temp = getTemperature()
-    res.json({"Conversão":castTemperature(temp)})
+    let {fahrenheit} = req.query;
+    let tempF = Number(fahrenheit);
+    res.json({"Conversão":castTemperature(tempF)});
 });
 
 router_operadores.get('/Incrementoedecremento', (req,res)=>{
@@ -39,7 +42,11 @@ router_operadores.get('/Incrementoedecremento', (req,res)=>{
 });
 
 router_operadores.get('/arearet', (req,res)=>{
-    res.json({"Resultados": areaRet()})
+    let {c, l, h} = req.query;
+    let cValue = Number(c);
+    let lValue = Number(l);
+    let hValue = Number(h);
+    res.json({"Resultados": areaRet(cValue, lValue, hValue)})
 });
 
 router_operadores.get('/imc', (req,res)=>{
@@ -47,13 +54,19 @@ router_operadores.get('/imc', (req,res)=>{
 });
 
 router_operadores.get('/desconto', (req,res)=>{
-    res.json({"Resultados": discount(250, 25)})
+    let {price, disc} = req.query
+    let priceValue = Number(price);
+    let discValue = Number(disc);
+    res.json({"Resultados": discount(priceValue, discValue)});
 });
 
 //Operadores relacionais
 
 router_operadores.get('/compararnumeros', (req,res)=>{
-    res.json({"Verificação": verifyEquality(12, "12")})
+    let {n1, n2} = req.query
+    let n1Value = Number(n1)
+    let n2Value = Number(n2)
+    res.json({"Verificação": verifyEquality(n1Value, n2Value)})
 });
 
 router_operadores.get('/validateage', (req,res)=>{
@@ -61,7 +74,8 @@ router_operadores.get('/validateage', (req,res)=>{
 })
 
 router_operadores.get('/verordemalfa', (req,res)=>{
-    res.json({"Ordem": verifyOrderAlfabetico("Maçã", "Banana")})
+    let {fruta1, fruta2} = req.query
+    res.json({"Ordem": verifyOrderAlfabetico(fruta1, fruta2)})
 });
 
 router_operadores.get('/validatestock', (req,res)=>{
@@ -69,7 +83,9 @@ router_operadores.get('/validatestock', (req,res)=>{
 })
 
 router_operadores.get('/tipovalor', (req,res)=>{
-    res.json({"Tipo": verifyTypeValue(0)})
+    let {val} = req.query
+    let valValue = Number(val)
+    res.json({"Tipo": verifyTypeValue(valValue)})
 });
 
 router_operadores.get('/validategrade', (req,res)=>{
@@ -79,7 +95,10 @@ router_operadores.get('/validategrade', (req,res)=>{
 //Operadores Lógicos
 
 router_operadores.get('/acessarPerfil', (req,res)=>{
-    res.json({"Status_do_Acesso": acessProfile("admin", "123")})
+    let {user, password} = req.query
+    let userValue = String(user)
+    let passwordValue = String(password)
+    res.json({"Status_do_Acesso": acessProfile(userValue, passwordValue)})
 });
 
 router_operadores.get('/settingcolor', (req,res)=>{
@@ -87,7 +106,9 @@ router_operadores.get('/settingcolor', (req,res)=>{
 })
 
 router_operadores.get('/pegarGuardachuva', (req,res)=>{
-    res.json({"Tem_Guarda-chuva": catchUmbrella()})
+    let {chuva} = req.query
+    let chuvaValue = Boolean(chuva)
+    res.json({"Tem_Guarda-chuva": catchUmbrella(chuvaValue)})
 });
 
 export {router_operadores}
