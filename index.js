@@ -1,5 +1,5 @@
 import express from 'express'; 
-//mport path from "path";
+ //import path from "path";
 const app = express();
 const door = 8080;
 

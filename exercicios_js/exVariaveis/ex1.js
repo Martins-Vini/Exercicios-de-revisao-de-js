@@ -1,10 +1,10 @@
 
 
 function calculoCircunferencia(raio){
-   const piValue = 3.141591
+   const piValue = 3
    let result = 2*piValue*raio
 
-   return result.toFixed(2);
+   return result;
 }
 
 //console.log(calculoCircunferencia(piValue.toFixed(2)))
