@@ -28,7 +28,12 @@ router_operadores.get('/verificarnum', (req,res)=>{
 });
 
 router_operadores.get('/notafinal', (req,res)=>{
-    res.json({"Nota":notaFinal()})
+    let {n1,n2,n3,n4} = req.query
+    let num1 = Number(n1)
+    let num2 = Number(n2)
+    let num3 = Number(n3)
+    let num4 = Number(n4)
+    res.json({"Nota":notaFinal(num1,num2,num3,num4)})
 });
 
 router_operadores.get('/conversaotemperatura', (req,res)=>{
@@ -37,8 +42,9 @@ router_operadores.get('/conversaotemperatura', (req,res)=>{
     res.json({"Conversão":castTemperature(tempF)});
 });
 
-router_operadores.get('/Incrementoedecremento', (req,res)=>{
-    res.json({"Resultados": incrementoDecremento()})
+router_operadores.get('/Incrementoedecremento/:id', (req,res)=>{
+    let n = Number(req.params.id)
+    res.json({"Resultados": incrementoDecremento(n)})
 });
 
 router_operadores.get('/arearet', (req,res)=>{
@@ -50,7 +56,10 @@ router_operadores.get('/arearet', (req,res)=>{
 });
 
 router_operadores.get('/imc', (req,res)=>{
-    res.json({"Resultados": imc()})
+    let {peso,altura} = req.query
+    let p = Number(peso)
+    let a = Number(altura)
+    res.json({"Resultados": imc(p,a)})
 });
 
 router_operadores.get('/desconto', (req,res)=>{
@@ -69,8 +78,9 @@ router_operadores.get('/compararnumeros', (req,res)=>{
     res.json({"Verificação": verifyEquality(n1Value, n2Value)})
 });
 
-router_operadores.get('/validateage', (req,res)=>{
-    res.json({"Verificação": validateAge(20)})
+router_operadores.get('/validateage/:id', (req,res)=>{
+    let idade = Number(req.params.id)
+    res.json({"Verificação": validateAge(idade)})
 })
 
 router_operadores.get('/verordemalfa', (req,res)=>{
@@ -79,7 +89,10 @@ router_operadores.get('/verordemalfa', (req,res)=>{
 });
 
 router_operadores.get('/validatestock', (req,res)=>{
-    res.json({"Quantidade": validateStock(50,50)})
+    let {qntd, stockmin} = req.query
+    let q = Number(qntd)
+    let s = Number(stockmin)
+    res.json({"Quantidade": validateStock(q,s)})
 })
 
 router_operadores.get('/tipovalor', (req,res)=>{
@@ -88,8 +101,9 @@ router_operadores.get('/tipovalor', (req,res)=>{
     res.json({"Tipo": verifyTypeValue(valValue)})
 });
 
-router_operadores.get('/validategrade', (req,res)=>{
-    res.json({"Resultado": validateGrades(7)})
+router_operadores.get('/validategrade/:id', (req,res)=>{
+    let nota = Number(req.params.id)
+    res.json({"Resultado": validateGrades(nota)})
 })
 
 //Operadores Lógicos
@@ -102,7 +116,8 @@ router_operadores.get('/acessarPerfil', (req,res)=>{
 });
 
 router_operadores.get('/settingcolor', (req,res)=>{
-    res.json({"Cor final": settingColor("black","white")})
+    let {color,color2} = req.query
+    res.json({"Cor final": settingColor(color,color2)})
 })
 
 router_operadores.get('/pegarGuardachuva', (req,res)=>{

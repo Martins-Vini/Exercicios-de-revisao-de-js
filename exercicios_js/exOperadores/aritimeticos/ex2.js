@@ -1,9 +1,4 @@
-function notaFinal(){
-    let bim1 = 9;
-    let bim2 = 10;
-    let bim3 = 5;
-    let bim4 = 6;
-
+function notaFinal(bim1, bim2, bim3, bim4){
     let nota = (bim1 + bim2 + bim3 + bim4)/4
 
     return nota

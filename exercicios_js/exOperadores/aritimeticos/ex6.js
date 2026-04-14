@@ -1,6 +1,5 @@
-function imc(){
-    let peso = 60.5;
-    let altura = 1.65;
+function imc(peso, altura){
+
     let result = peso / (altura * altura)
 
     return result.toFixed(2);

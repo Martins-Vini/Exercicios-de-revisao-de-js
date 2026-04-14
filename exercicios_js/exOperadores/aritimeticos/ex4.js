@@ -1,5 +1,4 @@
-function incrementoDecremento() {
-  let numero = 10;
+function incrementoDecremento(numero) {
 
   return `Valor inicial: ${numero}, Com o incremento: ${numero+1}, Com o decremento: ${numero-1}`;
 }

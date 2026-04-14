@@ -1,0 +1,883 @@
+{
+  "info": {
+    "_postman_id": "fad455c5-1ce0-4c38-8cc5-dae6a9508694",
+    "name": "atividadeSW2026",
+    "description": "# 🚀 Get started here\n\nThis template guides you through CRUD operations (GET, POST, PUT, DELETE), variables, and tests.\n\n## 🔖 **How to use this template**\n\n#### **Step 1: Send requests**\n\nRESTful APIs allow you to perform CRUD operations using the POST, GET, PUT, and DELETE HTTP methods.\n\nThis collection contains each of these [request](https://learning.postman.com/docs/sending-requests/requests/) types. Open each request and click \"Send\" to see what happens.\n\n#### **Step 2: View responses**\n\nObserve the response tab for status code (200 OK), response time, and size.\n\n#### **Step 3: Send new Body data**\n\nUpdate or add new data in \"Body\" in the POST request. Typically, Body data is also used in PUT request.\n\n```\n{\n    \"name\": \"Add your name in the body\"\n}\n\n ```\n\n#### **Step 4: Update the variable**\n\nVariables enable you to store and reuse values in Postman. We have created a [variable](https://learning.postman.com/docs/sending-requests/variables/) called `base_url` with the sample request [https://postman-api-learner.glitch.me](https://postman-api-learner.glitch.me). Replace it with your API endpoint to customize this collection.\n\n#### **Step 5: Add tests in the \"Scripts\" tab**\n\nAdding tests to your requests can help you confirm that your API is working as expected. You can write test scripts in JavaScript and view the output in the \"Test Results\" tab.\n\n<img src=\"https://content.pstmn.io/fa30ea0a-373d-4545-a668-e7b283cca343/aW1hZ2UucG5n\" width=\"2162\" height=\"1530\">\n\n## 💪 Pro tips\n\n- Use folders to group related requests and organize the collection.\n- Add more [scripts](https://learning.postman.com/docs/writing-scripts/intro-to-scripts/) to verify if the API works as expected and execute workflows.\n    \n\n## 💡Related templates\n\n[API testing basics](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=e9a37a28-055b-49cd-8c7e-97494a21eb54&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)  \n[API documentation](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=e9c28f47-1253-44af-a2f3-20dce4da1f18&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)  \n[Authorization methods](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=31a9a6ed-4cdf-4ced-984c-d12c9aec1c27&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "42791442"
+  },
+  "item": [
+    {
+      "name": "exVariaveis",
+      "item": [
+        {
+          "name": "ex1",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:8080/exVariaveis/calccircuferencia/10",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "exVariaveis",
+                "calccircuferencia",
+                "10"
+              ]
+            },
+            "description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+          },
+          "response": []
+        },
+        {
+          "name": "ex2",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:8080/exVariaveis/printarnome/Raven",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "exVariaveis",
+                "printarnome",
+                "Raven"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "ex3",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:8080/exVariaveis/mostrarpessoas/1",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "exVariaveis",
+                "mostrarpessoas",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "exOperadores",
+      "item": [
+        {
+          "name": "ex1",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:8080/exOperadores/verificarnum?num=10",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "exOperadores",
+                "verificarnum"
+              ],
+              "query": [
+                {
+                  "key": "num",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "ex2",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:8080/exOperadores/notafinal?n1=10&n2=10&n3=10&n4=10",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "exOperadores",
+                "notafinal"
+              ],
+              "query": [
+                {
+                  "key": "n1",
+                  "value": "10"
+                },
+                {
+                  "key": "n2",
+                  "value": "10"
+                },
+                {
+                  "key": "n3",
+                  "value": "10"
+                },
+                {
+                  "key": "n4",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "ex3",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:8080/exOperadores/conversaotemperatura?fahrenheit=40",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "exOperadores",
+                "conversaotemperatura"
+              ],
+              "query": [
+                {
+                  "key": "fahrenheit",
+                  "value": "40"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "ex4",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:8080/exOperadores/Incrementoedecremento/10",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "exOperadores",
+                "Incrementoedecremento",
+                "10"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "ex5",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:8080/exOperadores/arearet?c=10&l=11&h=9",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "exOperadores",
+                "arearet"
+              ],
+              "query": [
+                {
+                  "key": "c",
+                  "value": "10"
+                },
+                {
+                  "key": "l",
+                  "value": "11"
+                },
+                {
+                  "key": "h",
+                  "value": "9"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "ex6",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:8080/exOperadores/imc?peso=70&altura=1.70",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "exOperadores",
+                "imc"
+              ],
+              "query": [
+                {
+                  "key": "peso",
+                  "value": "70"
+                },
+                {
+                  "key": "altura",
+                  "value": "1.70"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "ex7",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:8080/exOperadores/desconto?price=500&disc=10",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "exOperadores",
+                "desconto"
+              ],
+              "query": [
+                {
+                  "key": "price",
+                  "value": "500"
+                },
+                {
+                  "key": "disc",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "ex8",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:8080/exOperadores/compararnumeros?n1=10&n2=10",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "exOperadores",
+                "compararnumeros"
+              ],
+              "query": [
+                {
+                  "key": "n1",
+                  "value": "10"
+                },
+                {
+                  "key": "n2",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "ex9",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:8080/exOperadores/validateage/10",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "exOperadores",
+                "validateage",
+                "10"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "ex10",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:8080/exOperadores/verordemalfa?fruta1=maça&fruta2=banana",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "exOperadores",
+                "verordemalfa"
+              ],
+              "query": [
+                {
+                  "key": "fruta1",
+                  "value": "maça"
+                },
+                {
+                  "key": "fruta2",
+                  "value": "banana"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "ex11",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:8080/exOperadores/validatestock?qntd=50&stockmmin=50",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "exOperadores",
+                "validatestock"
+              ],
+              "query": [
+                {
+                  "key": "qntd",
+                  "value": "50"
+                },
+                {
+                  "key": "stockmmin",
+                  "value": "50"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "ex12",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:8080/exOperadores/tipovalor?val=10",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "exOperadores",
+                "tipovalor"
+              ],
+              "query": [
+                {
+                  "key": "val",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "ex13",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:8080/exOperadores/validategrade/10",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "exOperadores",
+                "validategrade",
+                "10"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "ex14",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:8080/exOperadores/acessarPerfil?user=admin&password=123",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "exOperadores",
+                "acessarPerfil"
+              ],
+              "query": [
+                {
+                  "key": "user",
+                  "value": "admin"
+                },
+                {
+                  "key": "password",
+                  "value": "123"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "ex15",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:8080/exOperadores/settingcolor?color=black&color2=white",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "exOperadores",
+                "settingcolor"
+              ],
+              "query": [
+                {
+                  "key": "color",
+                  "value": "black"
+                },
+                {
+                  "key": "color2",
+                  "value": "white"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "ex16",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:8080/exOperadores/pegarGuardachuva?chuva=true",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "exOperadores",
+                "pegarGuardachuva"
+              ],
+              "query": [
+                {
+                  "key": "chuva",
+                  "value": "true"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "exLoops",
+      "item": [
+        {
+          "name": "ex1",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:8080/exLoops/contadorreverso?i=1100000000000",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "exLoops",
+                "contadorreverso"
+              ],
+              "query": [
+                {
+                  "key": "i",
+                  "value": "1100000000000"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "ex2",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:8080/exLoops/numberseven?num=2",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "exLoops",
+                "numberseven"
+              ],
+              "query": [
+                {
+                  "key": "num",
+                  "value": "2"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "ex3",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "file",
+              "file": {}
+            },
+            "url": {
+              "raw": "localhost:8080/exLoops/tabuada?number=3",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "exLoops",
+                "tabuada"
+              ],
+              "query": [
+                {
+                  "key": "number",
+                  "value": "3"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "ex4",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:8080/exLoops/newVetor?numbers=[3,5,4,2]",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "exLoops",
+                "newVetor"
+              ],
+              "query": [
+                {
+                  "key": "numbers",
+                  "value": "[3,5,4,2]"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "ex5",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:8080/exLoops/vercidade?n=2",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "exLoops",
+                "vercidade"
+              ],
+              "query": [
+                {
+                  "key": "n",
+                  "value": "2"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "exArrays",
+      "item": [
+        {
+          "name": "ex1",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:8080/exArrays/buscarFruta/banana",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "exArrays",
+                "buscarFruta",
+                "banana"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "ex2",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "exJson",
+      "item": [
+        {
+          "name": "ex1",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:8080/exJson/mostrarproduto/2",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "exJson",
+                "mostrarproduto",
+                "2"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "exCondicoes",
+      "item": [
+        {
+          "name": "ifElse",
+          "item": [
+            {
+              "name": "ex1",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "localhost:8080/exCondicoes/positivoounegativo/10",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "exCondicoes",
+                    "positivoounegativo",
+                    "10"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "ex2",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "localhost:8080/exCondicoes/cnh/18",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "exCondicoes",
+                    "cnh",
+                    "18"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "ex3",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "localhost:8080/exCondicoes/verificarnota/9",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "exCondicoes",
+                    "verificarnota",
+                    "9"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "ex4",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "localhost:8080/exCondicoes/validatevelocity/20",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "exCondicoes",
+                    "validatevelocity",
+                    "20"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "switchcase",
+          "item": [
+            {
+              "name": "ex1",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "localhost:8080/exCondicoes/calculadora/6/7/*",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "exCondicoes",
+                    "calculadora",
+                    "6",
+                    "7",
+                    "*"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "id",
+      "value": "1"
+    },
+    {
+      "key": "base_url",
+      "value": "https://template.postman-echo.com"
+    }
+  ]
+}
