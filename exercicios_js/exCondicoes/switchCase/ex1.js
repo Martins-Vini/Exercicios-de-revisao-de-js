@@ -25,4 +25,6 @@ function calc(num1, num2, op){
 
 //console.log(calc(getNumbers()));
 
+export default calc;
+
 export {getNumbers, calc}

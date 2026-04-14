@@ -11,6 +11,4 @@ function sumArrayNumbers(seq){
     return sum;
 }
 
-//console.log(sumArrayNumbers())
-
 export default sumArrayNumbers;
