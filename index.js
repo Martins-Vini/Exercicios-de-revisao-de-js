@@ -1,4 +1,5 @@
 import express from 'express'; 
+import pool from './config/db.js';
  //import path from "path";
 const app = express();
 const door = 8080;
@@ -15,6 +16,10 @@ app.use(express.json());
 
 app.get('/', (req , res)=>{
     res.send("I love my life!")
+})
+
+app.get('teste-banco', async (req,res)=>{
+    
 })
 
 app.use("/exVariaveis", router_variaveis)
@@ -36,6 +41,7 @@ app.use("/exArrays", router_arrays)
 //Json
 app.use("/exJson", router_json)
 
-app.listen(door, ()=>{
-    console.log(`O servidor está aberto na porta ${door}`)
-})
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Servidor rodando em http://localhost:${PORT}`);
+});
